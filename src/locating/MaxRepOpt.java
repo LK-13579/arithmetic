@@ -40,9 +40,10 @@ package locating;
 public class MaxRepOpt {
 
   public static void main(String[] args) {
-    String str = "aabbaaa";
-    MaxRepOpt maxRepOpt = new MaxRepOpt();
-    System.out.println(maxRepOpt.maxRepOpt1(str));
+    String str = "mcmc_2010-0";
+    System.out.println(Integer.valueOf(str.substring(9)));
+//    MaxRepOpt maxRepOpt = new MaxRepOpt();
+//    System.out.println(maxRepOpt.maxRepOpt1(str));
   }
 
   public int maxRepOpt1(String text) {
