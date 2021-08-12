@@ -58,9 +58,9 @@ public class BeautySum {
     int prev = head + 1;
     int beauty = 0;
     do {
-      String str = s.substring(head, prev);
       //2.计算字符串的美丽值,然后相加
-      if (str.length() > 2) {
+      if (prev-head > 2) {
+        String str = s.substring(head, prev);
         int max = 1;
         int min = 0;
         HashMap<Character, Integer> map = new HashMap<>();
