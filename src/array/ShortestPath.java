@@ -27,41 +27,40 @@ public class ShortestPath {
   public static void main(String[] args) {
     int[][] grid = {{0, 0, 0}, {1, 1, 0}, {0, 0, 0}, {0, 1, 1}, {0, 0, 0}};
     ShortestPath shortestPath = new ShortestPath();
-    shortestPath.shortestPath(grid, 0);
+//    shortestPath.shortestPath(grid, 0);
   }
 
-  public int shortestPath(int[][] grid, int k) {
-    int[][] result = new int[grid.length * grid[0].length][2];
-    return search(grid, 0, 0, k, result, 0);
-  }
-
-  private static int search(int[][] grid, int m, int n, int k, int[][] result, int i) {
-    if (m == grid.length - 1 && n == grid[m - 1].length - 1) {
-      return result.length;
-    }
-    //路径总是从左开始遍历,从0开始
-    if (n < grid[m].length - 1) {
-//      int i = grid[m][n + 1] == 1 ? k-- : n++;
-      if (grid[m][n + 1] != 1 && k >= 0) {
-        result[i++] = new int[]{m, n};
-        search(grid, m, n += 1, k, result, i);
-      }
-    }
-    if (m < grid.length - 1) {
-      //当已经到达最右边或路障已无法消除,则往下寻找
-//      int i = grid[m + 1][n] == 1 ? k-- : m++;
-      if (grid[m + 1][n] != 1 && k >= 0) {
-        result[i++] = new int[]{m, n};
-        search(grid, m += 1, n, k, result, i);
-      }
-    }
-    if (n == grid[m].length - 1 && grid[m + 1][n] == 1 && k <= 0) {
-//      int i = grid[m][n - 1] == 1 ? k-- : n--;
-      if (grid[m][n - 1] != 1 && k >= 0) {
-        result[i++] = new int[]{m, n};
-        search(grid, m, n -= 1, k, result, i);
-      }
-    }
-    return result.length;
-  }
+//  public int shortestPath(int[][] grid, int k) {
+//    int[][] result = new int[grid.length*grid[0].length][2];
+//    search(grid, 0, 0, k, result);
+//    return result;
+//  }
+//
+//  private static int search(int[][] grid, int m, int n, int k, int[][] result) {
+//    if (m == grid.length - 1 && n == grid[m - 1].length - 1) {
+//      return result.length;
+//    }
+//    //路径总是从左开始遍历,从0开始
+//    if (n < grid[m].length - 1) {
+////      int i = grid[m][n + 1] == 1 ? k-- : n++;
+//      if (grid[m][n + 1] != 1 && k >= 0) {
+//        result[n] = {m, n};
+//        search(grid, m, n += 1, k, result += 1);
+//      }
+//    }
+//    if (m < grid.length - 1) {
+//      //当已经到达最右边或路障已无法消除,则往下寻找
+////      int i = grid[m + 1][n] == 1 ? k-- : m++;
+//      if (grid[m + 1][n] != 1 && k >= 0) {
+//        search(grid, m += 1, n, k, result += 1);
+//      }
+//    }
+//    if (n == grid[m].length - 1 && grid[m + 1][n] == 1 && k <= 0) {
+////      int i = grid[m][n - 1] == 1 ? k-- : n--;
+//      if (grid[m][n - 1] != 1 && k >= 0) {
+//        search(grid, m, n -= 1, k, result += 1);
+//      }
+//    }
+//    return result;
+//  }
 }
