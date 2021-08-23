@@ -1,4 +1,4 @@
-package sort;
+package other.sort;
 
 /**
  * @author 刘康

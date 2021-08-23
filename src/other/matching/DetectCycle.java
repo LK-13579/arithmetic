@@ -1,8 +1,7 @@
-package matching;
+package other.matching;
 
 import common.ListNode;
 import java.util.HashMap;
-import java.util.HashSet;
 
 /**
  * @author 刘康

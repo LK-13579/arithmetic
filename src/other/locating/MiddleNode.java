@@ -1,4 +1,4 @@
-package locating;
+package other.locating;
 
 import common.ListNode;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package locating;
+package other.locating;
 
 /**
  * @author 刘康

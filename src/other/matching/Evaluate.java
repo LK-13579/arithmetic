@@ -1,4 +1,4 @@
-package matching;
+package other.matching;
 
 import java.util.ArrayList;
 import java.util.HashMap;

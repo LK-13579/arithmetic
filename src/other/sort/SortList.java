@@ -1,10 +1,7 @@
-package sort;
+package other.sort;
 
 import common.ListNode;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author 刘康

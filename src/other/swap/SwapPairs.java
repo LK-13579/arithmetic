@@ -1,4 +1,4 @@
-package swap;
+package other.swap;
 
 import common.ListNode;
 

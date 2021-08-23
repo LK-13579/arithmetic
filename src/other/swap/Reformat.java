@@ -1,6 +1,4 @@
-package swap;
-
-import java.util.Arrays;
+package other.swap;
 
 /**
  * @author 刘康
@@ -83,7 +81,7 @@ public class Reformat {
       return "";
     }
     char[] chars = s.toCharArray();
-//    Arrays.sort(chars, chars.length, 0);
+//    Arrays.other.sort(chars, chars.length, 0);
     for (int i = 0; i < chars.length; i += 2) {
       //该值是字母
       if (chars[i] - 'a' >= 0) {

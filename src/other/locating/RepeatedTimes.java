@@ -1,6 +1,5 @@
-package locating;
+package other.locating;
 
-import java.util.HashMap;
 import java.util.HashSet;
 
 /**

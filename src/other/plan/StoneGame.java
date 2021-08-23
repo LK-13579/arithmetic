@@ -1,4 +1,4 @@
-package plan;
+package other.plan;
 
 /**
  * @author 刘康

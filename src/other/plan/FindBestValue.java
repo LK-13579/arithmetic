@@ -1,4 +1,4 @@
-package plan;
+package other.plan;
 
 import java.util.Arrays;
 

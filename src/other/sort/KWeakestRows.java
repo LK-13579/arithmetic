@@ -1,11 +1,4 @@
-package sort;
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.TreeSet;
-import java.util.stream.Collectors;
+package other.sort;
 
 /**
  * @author 刘康

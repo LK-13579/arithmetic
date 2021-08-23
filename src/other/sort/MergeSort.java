@@ -1,6 +1,4 @@
-package sort;
-
-import java.util.Random;
+package other.sort;
 
 /**
  * @author 刘康
