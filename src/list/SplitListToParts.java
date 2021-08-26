@@ -56,7 +56,7 @@ public class SplitListToParts {
     ListNode node10 = new ListNode(10);
     node1.next = node2;
     node2.next = node3;
-    node3.next = node4;
+    node3.next = null;
     node4.next = node5;
     node5.next = node6;
     node6.next = node7;
@@ -64,7 +64,7 @@ public class SplitListToParts {
     node8.next = node9;
     node9.next = node10;
     SplitListToParts splitListToParts = new SplitListToParts();
-    ListNode[] listNodes = splitListToParts.splitListToParts(node1,3);
+    ListNode[] listNodes = splitListToParts.splitListToParts(node1,5);
     for (int i = 0; i < listNodes.length; i++) {
       System.out.println(listNodes[i].getVal());
     }
@@ -76,9 +76,15 @@ public class SplitListToParts {
   public ListNode[] splitListToParts(ListNode head, int k) {
     ListNode[] listNodes = new ListNode[k];
     //将链表转换成数组存储
-    ListNode[] list = new ListNode[10];
 
     ListNode node = head;
+    int nodeLength = 0;
+    while (node!=null) {
+      nodeLength++;
+      node = node.next;
+    }
+    ListNode[] list = new ListNode[nodeLength];
+
     int length = 0;
     while (head != null) {
       list[length++] = head;
@@ -88,10 +94,10 @@ public class SplitListToParts {
     }
     if (length <= k) {
       for (int i = 0; i < k; i++) {
-        if (list[i] != null) {
+        if (i >= list.length) {
+          listNodes[i] = null;
+        } else if (list[i] != null) {
           listNodes[i] = list[i];
-        } else {
-          listNodes[i] = new ListNode(0);
         }
       }
     } else {
