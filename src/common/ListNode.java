@@ -9,7 +9,7 @@ package common;
 
 public class ListNode {
 
-  int val;
+  public int val;
   public ListNode next;
 
   private ListNode merge(ListNode l1, ListNode l2) {
