@@ -55,12 +55,20 @@ public class DicesProbability {
     dp[n] = Double.parseDouble(String.format("%.5f", dp[n]));
     //计算中间的位置mid = n+dp.length除于2,那么第n+mid就是最大位置
     int mid = (n + dp.length) / 2;
-    int rate = 1;
+    int rate = 2;
     if (n > 2) {
       rate = n;
     }
-    for (int i = n + 1; i < mid + n; i++) {
-      dp[i] = dp[n] * ((i - n) * rate);
+    for (int i = n+1; i < mid + n; i++) {
+      dp[i] = dp[n] * rate;
+      if (n > 2) {
+        rate = rate + n;
+      } else {
+        rate = rate + 1;
+      }
+    }
+    for (int j = dp.length -1 ; j > mid; j--) {
+      dp[j] = dp[n++];
     }
 
     return dp;
