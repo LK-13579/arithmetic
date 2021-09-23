@@ -64,7 +64,7 @@ public class CanCompleteCircuit {
       if (gas[i]<cost[i])continue;
       int j = i;
       boolean[] ci = new boolean[gas.length];
-      while (j < gas.length && ci[j] == false) {
+      while (j < gas.length && !ci[j]) {
         circuit = circuit + gas[j] - cost[j];
         //当油量为0时候退出
         if (circuit < 0) {
