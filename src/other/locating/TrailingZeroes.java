@@ -28,15 +28,18 @@ public class TrailingZeroes {
 
   public static void main(String[] args) {
     TrailingZeroes trailingZeroes = new TrailingZeroes();
-    int i = trailingZeroes.trailingZeroes(5);
+    int i = trailingZeroes.trailingZeroes(10);
+//    System.out.println(7*6*5*4*3*2);
     System.out.println(i);
   }
 
   public int trailingZeroes(int n) {
-    if (n == 1) {
-      return 1;
+    int sum = 0;
+    while(n >= 5){
+      n = n/5;
+      sum += n;
     }
-    return n * trailingZeroes(n - 1);
+    return sum;
   }
 
 }
