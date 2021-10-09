@@ -47,23 +47,28 @@ package array;
 public class CanBeIncreasing {
 
   public static void main(String[] args) {
-    int[] arr = {1,1,1};
+    int[] arr = {512,867,904,997,403};
     CanBeIncreasing canBeIncreasing = new CanBeIncreasing();
     boolean b = canBeIncreasing.canBeIncreasing(arr);
     System.out.println(b);
   }
 
   public boolean canBeIncreasing(int[] nums) {
-//    int j = 1;
-    for (int i = 1; i <= nums.length -2; i++) {
+    boolean asc = true;
+    int n = nums.length;
+    for (int i = 0; i < n - 1; i++) {
       if (nums[i] >= nums[i + 1]) {
-        //这个时候删除i可以有序递增
-        if (nums[i + 1] <= nums[i - 1]) {
-          if (nums[i + 2] <= nums[i]) {
+        if (asc) {
+          if (i - 1 < 0 || nums[i + 1] > nums[i - 1]) {
+            asc = false;
+          } else if (i + 2 >= n || nums[i + 2] > nums[i]) {
+            asc = false;
+          } else {
             return false;
           }
+        } else {
+          return false;
         }
-//        return false;
       }
     }
     return true;
