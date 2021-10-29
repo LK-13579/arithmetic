@@ -8,9 +8,9 @@ package common;
  */
 public class TreeNode {
 
-  public int val;
-  public TreeNode left;
-  public TreeNode right;
+  public TreeNode left2;
+  public TreeNode right11;
+  public void middle;
 
   public TreeNode() {
   }
