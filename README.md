@@ -1,4 +1,4 @@
-# arithmetic
+### Arithmetic
 算法总结
 
 ###作者  
